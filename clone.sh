@@ -3,8 +3,13 @@
 source .env
 
 DIR="/var/www/split"
+CONF="/etc/nginx/sites-available/split.conf"
+TMP="/tmp/ci"
 
-git clone https://${ACCESS_TOKEN}@github.com/UNSERsplit/Backend ${DIR}
+cd ${TMP}
+git pull
+cp nginx.conf ${CONF}
+nginx -s reload
+
 cd ${DIR}
-docker compose down
-docker compose up --build -d
+git pull
