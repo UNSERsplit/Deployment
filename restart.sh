@@ -15,3 +15,4 @@ cd ${DIR}
 git pull
 docker compose down
 docker compose up --build -d
+docker exec -it split-web-1 alembic upgrade head

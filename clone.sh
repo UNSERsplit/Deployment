@@ -13,3 +13,4 @@ nginx -s reload
 
 cd ${DIR}
 git pull
+docker exec -it split-web-1 alembic upgrade head
