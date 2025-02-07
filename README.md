@@ -2,8 +2,8 @@
 
 DB setup:
 ```sql
-create database mydb;
+create database database;
 create user myuser with encrypted password 'mypass';
-grant all privileges on database mydb to myuser;
-\c mydb postgres
+grant all privileges on database database to myuser;
+\c database postgres
 GRANT ALL ON SCHEMA public TO myuser```
